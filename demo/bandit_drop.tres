@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="LootTableLite" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://demo/items/apple.tres" id="1_ecncf"]
+[ext_resource type="Resource" path="res://demo/items/gold.tres" id="2_1spy6"]
+[ext_resource type="Resource" path="res://demo/items/ring.tres" id="3_dlba6"]
+[ext_resource type="Resource" path="res://demo/items/gem.tres" id="4_qfmcm"]
+[ext_resource type="Script" path="res://addons/loot_lite/loot_table.gd" id="5_oo0ql"]
+
+[resource]
+script = ExtResource("5_oo0ql")
+id = "bandit_drop"
+entries = [{
+"item": ExtResource("1_ecncf"),
+"max": 3,
+"min": 1,
+"weight": 50
+}, {
+"item": ExtResource("2_1spy6"),
+"max": 25,
+"min": 5,
+"weight": 30
+}, {
+"item": ExtResource("3_dlba6"),
+"max": 1,
+"min": 1,
+"weight": 15
+}, {
+"item": ExtResource("4_qfmcm"),
+"max": 1,
+"min": 1,
+"weight": 5
+}]
+rolls = 2

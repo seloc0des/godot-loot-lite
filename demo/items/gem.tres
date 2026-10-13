@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/loot_lite/item_resource.gd" id="1_mjswk"]
+
+[resource]
+script = ExtResource("1_mjswk")
+id = "gem"
+name = "Rare Gem"
