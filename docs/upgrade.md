@@ -15,14 +15,13 @@
 
 ## Migration from Lite
 
-Same entry shape (`item`, `weight`, `min`, `max`), same `roll(rng)` signature. The Lite table is a Pro table missing only the conditional / nested fields. Drop your `.tres` files into the Pro project and they work as a fallback weighted-only table.
+The full table is a different resource. A Lite table is a `LootTableLite` whose entries are dictionaries (`item`, `weight`, `min`, `max`). The full `LootTable` holds `LootEntry` resources (`item`, `weight`, `min_count`, `max_count`), so a Lite `.tres` doesn't load as a full table. Rebuild each table in the full dock. In code, `roll` takes the `rng` as a required argument in the full version.
 
 Your `LootDrop` nodes keep working while Loot (Lite) stays installed next to Pro. To move a chest or an enemy to Pro, delete its `LootDrop` and apply Pro's Setup tab to the same node, so it doesn't drop twice. Pro reuses the `LootArea` that's already there.
 
 ## Where to buy
 
-The full version is on itch.io: **https://selodev.itch.io**. It keeps the same
-field names and method signatures, so moving up from Lite is a drop-in swap.
+The full version is on itch.io: **https://selodev.itch.io/godot-loot-system**.
 
 ## License
 
