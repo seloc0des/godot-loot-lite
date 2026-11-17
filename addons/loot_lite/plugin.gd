@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-# Ships a compact no-code authoring dock (the Pro tier adds full fields + wiring)
+# Ships a compact no-code authoring dock (the full version adds full fields + wiring)
 # plus the "chooser" — pick what drops loot → Apply → baked onto your node.
 
 const CHOOSER_SCRIPT := preload("res://addons/loot_lite/editor/loot_chooser_dock.gd")

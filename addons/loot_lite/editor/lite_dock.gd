@@ -15,7 +15,7 @@ const RESOURCE_SCRIPT := preload("res://addons/loot_lite/loot_table.gd")
 const DEFAULT_DIR := "res://loot"
 const DOCK_NAME := "Loot Tables (Lite)"
 const NEW_BASENAME := "new_table"
-const UPGRADE_LABEL := "Pro adds nested, conditional and guaranteed entries, magic find, pity counters, and loot you see on the ground."
+const UPGRADE_LABEL := "The full version adds nested, conditional and guaranteed entries, magic find, pity counters, and loot you see on the ground."
 const UPGRADE_URL := "https://selodev.itch.io/godot-loot-system"
 # The table's entries get a row editor here instead of the Inspector.
 const ROWS_PROP := "entries"
@@ -134,7 +134,7 @@ func _build_ui() -> void:
 	up.modulate = Color(0.85, 0.8, 0.55)
 	up.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(up)
-	root.add_child(_button("Upgrade to Pro →", func(): OS.shell_open(UPGRADE_URL)))
+	root.add_child(_button("Upgrade to the full version →", func(): OS.shell_open(UPGRADE_URL)))
 	# EditorFileDialog is created lazily in _open_dialog — it's an editor-only
 	# class, so constructing it here would break any non-editor instantiation.
 
@@ -299,7 +299,7 @@ func _texture(prop: String, value: Variant) -> Control:
 
 func _deferred(kind: String) -> Label:
 	var l := Label.new()
-	l.text = "(%s: edit in Inspector. Pro authors this in-panel)" % kind
+	l.text = "(%s: edit in Inspector. The full version authors this in-panel)" % kind
 	l.modulate = HINT_COLOR
 	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	return l

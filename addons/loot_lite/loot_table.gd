@@ -5,7 +5,7 @@ extends Resource
 # the table picks `rolls` entries (with replacement) using the weights, and
 # returns an Array of {item, count} dictionaries.
 #
-# Cut from Pro:
+# Not in the Lite:
 #   * Nested LootTable entries (a roll points at another table)
 #   * Conditional entries (drop only if flag X, biome Y, kill count Z)
 #   * Guaranteed entries (no weight roll)

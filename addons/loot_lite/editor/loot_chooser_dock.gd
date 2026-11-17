@@ -96,7 +96,7 @@ func _ready() -> void:
 
 	root.add_child(HSeparator.new())
 	var pro := Label.new()
-	pro.text = "🔒 Pro adds nested and conditional tables, guaranteed drops, magic find, pity counters, loot you see on the ground and pick up, and saving what already dropped."
+	pro.text = "🔒 The full version adds nested and conditional tables, guaranteed drops, magic find, pity counters, loot you see on the ground and pick up, and saving what already dropped."
 	pro.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	pro.modulate = Color(0.85, 0.8, 0.55)
 	root.add_child(pro)

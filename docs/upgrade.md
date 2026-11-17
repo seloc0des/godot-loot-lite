@@ -1,7 +1,7 @@
-# Upgrade to Loot (Pro)
+# Upgrade to the full Loot
 
-## What Pro adds
-- **The rest of the no-code layer.** Lite's Setup tab wires drops on touch and on death, and its table tab edits each entry as a row (item, weight, count). Pro's dock also authors guaranteed, conditional and nested entries, adds a treasure chest that spawns loot on the ground, and ships the shared `EventTrigger` node to fire other gameplay (quest progress, saves, XP) without a script.
+## What the full version adds
+- **The rest of the no-code layer.** Lite's Setup tab wires drops on touch and on death, and its table tab edits each entry as a row (item, weight, count). The full version's dock also authors guaranteed, conditional and nested entries, adds a treasure chest that spawns loot on the ground, and ships the shared `EventTrigger` node to fire other gameplay (quest progress, saves, XP) without a script.
 
 - **Nested tables.** An entry can be another `LootTable`. Bandit → "common drops" sub-table → "weapons" sub-table.
 - **Conditional entries.** Drop only if a flag is set, the biome matches, the player is above a level, etc.
@@ -17,7 +17,7 @@
 
 The full table is a different resource. A Lite table is a `LootTableLite` whose entries are dictionaries (`item`, `weight`, `min`, `max`). The full `LootTable` holds `LootEntry` resources (`item`, `weight`, `min_count`, `max_count`), so a Lite `.tres` doesn't load as a full table. Rebuild each table in the full dock. In code, `roll` takes the `rng` as a required argument in the full version.
 
-Your `LootDrop` nodes keep working while Loot (Lite) stays installed next to Pro. To move a chest or an enemy to Pro, delete its `LootDrop` and apply Pro's Setup tab to the same node, so it doesn't drop twice. Pro reuses the `LootArea` that's already there.
+Your `LootDrop` nodes keep working while Loot (Lite) stays installed next to the full version. To move a chest or an enemy to the full version, delete its `LootDrop` and apply the full version's Setup tab to the same node, so it doesn't drop twice. The full version reuses the `LootArea` that's already there.
 
 ## Where to buy
 

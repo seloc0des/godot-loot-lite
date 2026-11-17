@@ -4,7 +4,7 @@
 
 The working core of the [selodev Loot addon](docs/upgrade.md). One `LootTableLite` Resource per drop source. A chest or an enemy rolls it, and the loot goes into the player's bag.
 
-> **New in v1.1: no-code dock.** Enable the plugin and an authoring panel appears: create, duplicate and delete your tables, set their rolls, and edit each entry as a row: pick the item, set its weight and how many drop. (The Pro tier adds guaranteed, conditional and nested entries.)
+> **New in v1.1: no-code dock.** Enable the plugin and an authoring panel appears: create, duplicate and delete your tables, set their rolls, and edit each entry as a row: pick the item, set its weight and how many drop. (The full version adds guaranteed, conditional and nested entries.)
 
 ## One-click setup (no code)
 
@@ -48,15 +48,15 @@ var drops := table.roll()  # [{item: <Resource>, count: <int>}, ...]
 
 | Feature | Tier |
 |---|---|
-| Nested `LootTable` entries (roll into another table) | Pro |
-| Conditional entries (flags, biome, kill count) | Pro |
-| Guaranteed entries (no weight roll) | Pro |
-| Magic find boost on rare entries | Pro |
-| Pity counter (guaranteed drop after N misses) | Pro |
-| Deterministic RNG seed override | Pro |
-| Loot you see on the ground and pick up (`WorldDrop`) | Pro |
-| Remembering which chests already dropped, across save and load | Pro |
-| `loot_rolled` / `loot_dropped` events on the shared bus for the other packs | Pro |
+| Nested `LootTable` entries (roll into another table) | Full version |
+| Conditional entries (flags, biome, kill count) | Full version |
+| Guaranteed entries (no weight roll) | Full version |
+| Magic find boost on rare entries | Full version |
+| Pity counter (guaranteed drop after N misses) | Full version |
+| Deterministic RNG seed override | Full version |
+| Loot you see on the ground and pick up (`WorldDrop`) | Full version |
+| Remembering which chests already dropped, across save and load | Full version |
+| `loot_rolled` / `loot_dropped` events on the shared bus for the other packs | Full version |
 
 See [docs/upgrade.md](docs/upgrade.md).
 
